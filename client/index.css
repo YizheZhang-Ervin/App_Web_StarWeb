@@ -1,0 +1,68 @@
+/* 通用 */
+*{
+    margin:0;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+}
+
+.horizontal{
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.between{
+    justify-content: space-between;
+}
+
+/* 头部 */
+header{
+    min-height: 7vh;
+    width: 100%;
+    background-color: beige;
+    color:navy;
+    justify-content: center;
+    border-bottom: 2px dashed lightgray;
+}
+
+header section{
+    justify-content: start;
+    width: 80vw;
+}
+
+/* 底部 */
+footer{
+    min-height: 7vh;
+    width: 100%;
+    background-color: beige;
+    color:navy;
+    font-weight: bold;
+    justify-content: center;
+    border-top: 2px dashed lightgray;
+}
+
+/* 中间 */
+main{
+    min-height: 93vh;
+    width: 100%;
+    background-image: linear-gradient(-45deg,beige, white);
+}
+
+.menu{
+    min-height: 100vh;
+}
+
+.margintb{
+    margin: 2% 0%;
+}
+
+.el-submenu .el-menu-item{
+    min-width: 50px!important;
+}

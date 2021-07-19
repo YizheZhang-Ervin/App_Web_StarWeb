@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 
 // 中间件
-const middlewares = require("./server/middlewares");
+const middlewares = require("./server_express/middlewares");
 middlewares(app);
 
 // 端口

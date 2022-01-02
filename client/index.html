@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="resources/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+        <link rel="stylesheet" href="./libs/element-ui.css">
         <link rel="stylesheet" href="index.css">
-        <title>XXX</title>
+        <title></title>
     </head>
-
     <body>
         <section id="app">
             <!-- 页头 -->
             <header class="center vertical">
                 <section class="center between">
-                    <img src="resources/favicon.ico" />
-                    <h1>LOGO</h1>
-                    <el-menu default-active="1" mode="horizontal" @select="changePage" background-color="beige"
-                        text-color="black" active-text-color="navy">
+                    <!-- <img src="resources/favicon.ico" /> -->
+                    <h1>{{title}}</h1>
+                    <el-menu default-active="homepage" mode="horizontal" @select="changePage" background-color="whitesmoke"
+                        text-color="black" active-text-color="steelblue">
                         <el-menu-item index="homepage">主页</el-menu-item>
                         <el-submenu index="2">
                             <template slot="title">产品中心</template>
@@ -43,8 +41,8 @@
             <main>
                 <el-row>
                     <el-col :span="4">
-                        <el-menu default-active="2" class="menu" @select="changePage" background-color="beige"
-                            text-color="black" active-text-color="navy">
+                        <el-menu default-active="2" class="menu" @select="changePage" 
+                        background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
                             <el-submenu index="1">
                                 <template slot="title">
                                     <i class="el-icon-location"></i>
@@ -89,17 +87,17 @@
             </main>
             <!-- 页尾 -->
             <footer class="center">
-                XX Group @2021 Made In Suzhou By XXX
+                Astar @2022 Suzhou
             </footer>
             <el-backtop></el-backtop>
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios@0.21.0/dist/axios.min.js"></script>
-        <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-        <script src="index.js" async="async"></script>
-        <script src="displayPage.js"></script>
-        <script src="contactus.js"></script>
-        <script src="homePage.js"></script>
+        <script src="./libs/vue.js"></script>
+        <script src="./libs/axios.js"></script>
+        <script src="./libs/element-ui.js"></script>
+        <script src="./components/homePage.js"></script>
+        <script src="./components/displayPage.js"></script>
+        <script src="./components/contactus.js"></script>
+        <script src="./index.js" async="async"></script>
     </body>
 
 </html>

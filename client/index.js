@@ -1,16 +1,14 @@
-var app = new Vue({
+﻿var app = new Vue({
     el: '#app',
     data() {
         return {
+            title:"Astar | Monitor System",
             textarea:"",
-            displayComponent: "1-1"
+            displayComponent: "homepage"
         }
     },
     mounted() {
-        // title时钟
-        setInterval(() => {
-            this.checkVisibility();
-        }, 1000);
+        document.title = this.title;
     },
     methods: {
         // 更改显示内容
@@ -25,20 +23,6 @@ var app = new Vue({
                 case key.match(/C.+/).input:
                     this.displayComponent = key;
                     break;
-            }
-        },
-        // title时钟，当页面在前台可见时
-        checkVisibility: function () {
-            let vs = document.visibilityState;
-            let date = new Date(Date.now());
-            if (vs == "visible") {
-                document.title =
-                    "XXX - " +
-                    date.getHours() +
-                    ":" +
-                    date.getMinutes() +
-                    ":" +
-                    date.getSeconds();
             }
         },
         post(url) {

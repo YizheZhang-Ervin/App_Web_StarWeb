@@ -24,12 +24,13 @@
 
 /* 头部 */
 header{
-    min-height: 7vh;
+    height: 7vh;
+    min-height:60px;
     width: 100%;
-    background-color: beige;
-    color:navy;
+    background-color: whitesmoke;
+    color:steelblue;
     justify-content: center;
-    border-bottom: 2px dashed lightgray;
+    /* border-bottom: 1px solid lightgray; */
 }
 
 header section{
@@ -39,24 +40,25 @@ header section{
 
 /* 底部 */
 footer{
-    min-height: 7vh;
+    height: 7vh;
+    min-height:60px;
     width: 100%;
-    background-color: beige;
-    color:navy;
+    background-color: whitesmoke;
+    color:steelblue;
     font-weight: bold;
     justify-content: center;
-    border-top: 2px dashed lightgray;
+    /* border-top: 2px dashed lightgray; */
 }
 
 /* 中间 */
 main{
-    min-height: 93vh;
+    height: 86vh;
     width: 100%;
-    background-image: linear-gradient(-45deg,beige, white);
+    background-image: linear-gradient(45deg,rgb(213, 223, 236), white);
 }
 
 .menu{
-    min-height: 100vh;
+    height: 86vh;
 }
 
 .margintb{

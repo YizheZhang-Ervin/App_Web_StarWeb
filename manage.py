@@ -1,4 +1,4 @@
-from server_flask.www import app
+from server.application import app
 
 if __name__ == "__main__":
     app.run()

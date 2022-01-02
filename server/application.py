@@ -1,24 +1,26 @@
 import sys
-sys.path.append("server_flask/")
+sys.path.append("server/")
 
 from flask import Flask, jsonify, render_template, request
 from flask_restful import Api,reqparse
 from flask_cors import CORS
 
-import jsonAPI
+from controller.HistoryDataController import HistoryDataAPI
+from controller.RealtimeDataController import RealtimeDataAPI
+from controller.SupportController import SupportAPI
 
-# Initialize Flask
+# 初始化Flask
 app = Flask(__name__,static_folder='../client',template_folder='../client',static_url_path="")
 api = Api(app)
 
-# Cross Domain
+# 前后端跨域处理
 cors = CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
-# parse parameters
+# 解析前后端传参
 parser = reqparse.RequestParser()
 parser.add_argument('key', type=str)
 
-# Basic Route
+# 请求显示主页
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
@@ -27,7 +29,8 @@ def index():
         key = request.args.get('key', '')
         return render_template('index.html', data=key)
 
-# RESTful API Route
+# RESTful API 路径
 # 路由传参
-api.add_resource(jsonAPI.jsonAPI, '/api/<key>')
-api.add_resource(jsonAPI.jsonAPI2, '/api/')
+api.add_resource(RealtimeDataAPI, '/api/realtime')
+api.add_resource(HistoryDataAPI, '/api/history')
+api.add_resource(SupportAPI, '/api/support')

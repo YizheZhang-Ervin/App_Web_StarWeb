@@ -4,7 +4,11 @@
         return {
             title:"Astar | Monitor System",
             textarea:"",
-            displayComponent: "homepage"
+            displayComponent: "homepage",
+            mainPartStyle:{
+                height: parseInt(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight)-120 +"px",
+                overflow:"auto"
+            }
         }
     },
     mounted() {

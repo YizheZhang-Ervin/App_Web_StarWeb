@@ -2,4 +2,4 @@ Flask_RESTful
 Flask_Cors
 Flask
 pandas
-numpy
+pyserial

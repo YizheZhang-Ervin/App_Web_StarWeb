@@ -3,6 +3,8 @@ import serial
 import serial.tools.list_ports
 import threading
 
+# 命令查串口 python -m serial.tools.list_ports
+
 # 可用串口查询
 def searchAavailableSerial():
     port_list = list(serial.tools.list_ports.comports())

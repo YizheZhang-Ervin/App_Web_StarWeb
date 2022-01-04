@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 通用样式 */
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-vertical {
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.darkbg {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: gold;
+	font-size: x-large;
+	border: 1px solid gold;
+}
+
+.lightbg {
+	background-color: beige;
+	color: darkblue;
+	font-size: x-large;
+}
+
+/* 特定样式 */
+.aside {
+}
+
+.header {
+	height: 70px;
+}
+
+.main {
+}
+
+.footer {
+	height: 70px;
+}
+
+.btn {
+	margin: 5px 0 !important;
+}

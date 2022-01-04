@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="resources/logo.png" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Astar | Monitor System</title>
+        <!-- 引入样式 -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    </head>
+
+    <body>
+        <section id="app">
+            <!-- 整个网页作为三行 -->
+            <!-- 1 头部 -->
+            <header>
+                <section class="header flex darkbg">Astar | Monitor System</section>
+            </header>
+            <!-- 2 主体 -->
+            <el-row class="main">
+                <!-- 2.1 左边栏 -->
+                <el-col :span=4>
+                    <section class="aside flex darkbg flex-vertical" :style="mainPartStyle">
+                        <el-button type="primary" plain class="btn" @click="doClick('A')">A按钮</el-button>
+                        <el-button type="success" plain class="btn" @click="doClick('B')">B按钮</el-button>
+                        <el-button type="info" plain class="btn" @click="doClick('C')">C按钮</el-button>
+                        <el-button type="warning" plain class="btn" @click="doClick('D')">D按钮</el-button>
+                        <el-button type="danger" plain class="btn" @click="doClick('E')">E按钮</el-button>
+                    </section>
+                </el-col>
+                <!-- 2.2 主要内容部分-->
+                <el-col :span=20>
+                    <section class="main lightbg" :style="mainPartStyle">
+                        <visualization :msg="visualData" class="flex"></visualization>
+                    </section>
+                </el-col>
+            </el-row>
+            <!-- 3 尾部 -->
+            <footer>
+                <section class="footer flex darkbg">Astar @2022 Suzhou</section>
+            </footer>
+            <el-backtop></el-backtop>
+        </section>
+    </body>
+    <!-- 引入库 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./components/visualization.js"></script>
+    <script src="index.js" async="async"></script>
+
+</html>

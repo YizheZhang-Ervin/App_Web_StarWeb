@@ -5,7 +5,7 @@ def createData(rawData,newData,dataName):
     saveData(df,dataName)
 
 def retrieveData(dataName):
-    df = pd.read_csv(f"../repository/{dataName}.csv",index_col="id")
+    df = pd.read_csv(f"../data/{dataName}.csv",index_col="id")
     return df
 
 def updateData(rowNo,rawData,newData,dataName):
@@ -18,7 +18,7 @@ def deleteData(data,dataName,condition):
     saveData(df,dataName)
     
 def saveData(data,dataName):
-    data.to_csv(f"../repository/{dataName}.csv")
+    data.to_csv(f"../data/{dataName}.csv")
 
 
 

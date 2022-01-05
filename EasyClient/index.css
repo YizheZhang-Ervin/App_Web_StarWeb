@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 /* 通用样式 */
@@ -18,14 +19,16 @@
 .darkbg {
 	background-color: rgba(0, 0, 0, 0.8);
 	color: gold;
-	font-size: x-large;
 	border: 1px solid gold;
 }
 
 .lightbg {
 	background-color: beige;
 	color: darkblue;
-	font-size: x-large;
+}
+
+.large-font {
+	font-size: x-large !important;
 }
 
 /* 特定样式 */
@@ -45,4 +48,10 @@
 
 .btn {
 	margin: 5px 0 !important;
+}
+
+.desc-label,
+.desc-content {
+	background: rgb(229, 232, 241) !important;
+	color: rgba(0, 0, 0, 0.8) !important;
 }

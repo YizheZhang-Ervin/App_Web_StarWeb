@@ -17,7 +17,7 @@
             <!-- 整个网页作为三行 -->
             <!-- 1 头部 -->
             <header>
-                <section class="header flex darkbg">Astar | Monitor System</section>
+                <section class="header flex darkbg large-font">Astar | Monitor System</section>
             </header>
             <!-- 2 主体 -->
             <el-row class="main">
@@ -34,13 +34,13 @@
                 <!-- 2.2 主要内容部分-->
                 <el-col :span=20>
                     <section class="main lightbg" :style="mainPartStyle">
-                        <visualization :msg="visualData" class="flex"></visualization>
+                        <visualization :msg="visualData" :outerheight="mainPartStyle.height"></visualization>
                     </section>
                 </el-col>
             </el-row>
             <!-- 3 尾部 -->
             <footer>
-                <section class="footer flex darkbg">Astar @2022 Suzhou</section>
+                <section class="footer flex darkbg large-font">Astar @2022 Suzhou</section>
             </footer>
             <el-backtop></el-backtop>
         </section>
@@ -49,6 +49,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/echarts@5.2.2/dist/echarts.js"></script> -->
+    <script src="./resources/echarts.js"></script>
     <script src="./components/visualization.js"></script>
     <script src="index.js" async="async"></script>
 

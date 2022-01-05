@@ -1,21 +1,22 @@
 from flask_restful import Resource,reqparse
 from flask import jsonify, request
+import random
 
 # parse parameters
 parser = reqparse.RequestParser()
 parser.add_argument('key', type=str)
 
-class HistoryDataAPI(Resource):
-    # http://127.0.0.1:5000/api/?pkg=值
+# 问号传参
+class visualAPI(Resource):
+    # http://127.0.0.1:5000/api/data?pkg=值
     def get(self):
         try:
-            pkg = request.args.get("pkg","")
-            # 单行代码
-            jsonObj = {"result":eval(pkg),'function':2}
-
+            # pkg = request.args.get("pkg","")
+            singleVal = random.randrange(0,100,1)
+            jsonObj = {"result":singleVal,"code":200,"msg":"Succeed"}
             return jsonify(jsonObj)
         except Exception:
-            return jsonify({"error":"error"})
+            return jsonify({"result":"","code":500,"msg":"Fail"})
     
     # http://127.0.0.1:5000/api/
     # 传{"key":"值"}

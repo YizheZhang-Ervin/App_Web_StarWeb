@@ -32,7 +32,7 @@ Vue.component('visualization', {
                 chart2: ""
             },
             apiURL: {
-                getUrl: `/api/data`,
+                getUrl: `/api/data?status=open`,
                 postUrl: `/api/data`
             }
         }
@@ -45,6 +45,11 @@ Vue.component('visualization', {
             this.visualData = this.msg
             this.allCharts.chart1 = this.plot("chart1", "line")
             this.allCharts.chart2 = this.plot("chart2", "gauge")
+            window.onresize = () => {
+                Object.keys(this.allCharts).forEach(idx => {
+                    this.allCharts[idx].resize()
+                })
+            };
             setInterval(() => {
                 this.get()
             }, 1000)
@@ -59,10 +64,10 @@ Vue.component('visualization', {
                         this.setPlotOptions(this.allCharts.chart1, "line")
                         this.setPlotOptions(this.allCharts.chart2, "gauge")
                     } else {
-                        console.log("调取接口异常")
+                        console.log("[非200]调取接口异常")
                     }
                 }, (err) => {
-                    console.log("调取接口异常")
+                    console.log("[异常]调取接口异常")
                 });
         },
         post() {
